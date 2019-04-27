@@ -1,0 +1,7 @@
+nav .nav-bar {
+	background-color: blue;
+}
+
+.carousel, .carousel-slider {
+	float: right;
+}
