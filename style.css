@@ -1,7 +1,8 @@
 nav .nav-bar {
 	background-color: blue;
 }
-
-.carousel, .carousel-slider {
-	float: right;
+body .home{
+	background-image: url(http://www.ciudaris.com/blog/wp-content/uploads/conversacion-roommates-departamentos-ciudaris.png);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
