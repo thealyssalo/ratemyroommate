@@ -3,24 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems);
 });
 
-meSpeak.loadConfig("mespeak_config.json");
-/*Anderson, Todd. "speech-bubble". JavaScript (jQuery). https://glitch.com/edit/#!/speech-bubble?path=script.js:4:12*/ 
 
-var lines = ["Riley","Mackey","MyEclairKey","••••••••","••••••••","mackeyriley@gmail.com","mackeyriley@gmail.com",
-			 "Student","Early","Quiet","Cooks sometimes"];
-var counter = +1;
+var lines = ["Riley","Mackey","MyEclairKey","••••••••","••••••••","mackeyriley@gmail.com","mackeyriley@gmail.com"];
+var counter = -1;
+var typeLoop;
+var lines2 = ["Gemini","Guinea Pig","Water filter, sunscreen, shovel, gun"];
+var change = -1;
+
 
 $(document).keydown(function(e){
 	if(e.key == "Enter"){
-		counter = counter-1;
-		$('label').text("");
-		typeText(lines[counter],55,'label');
+		counter = counter+1;
+		typeText(lines[counter],70,'label:eq('+counter+')');
+	}
+	if(e.key == "Backspace"){
+		change = change+1;
+		typeText(lines2[change],70,'label:eq('+change+')');
 	}
 })
 
 function typeText(string, speed, destination='#mainText', callback=function(){}) {
   if(typeLoop){clearInterval(typeLoop)}
-  clearTimeout(bubbleFade)
   c = 0;
   $('#textDiv').fadeIn()
     var dest = $(destination);
