@@ -3,17 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems);
 });
 
-/*figure out how to add meSpeak*/
+meSpeak.loadConfig("mespeak_config.json");
+/*Anderson, Todd. "speech-bubble". JavaScript (jQuery). https://glitch.com/edit/#!/speech-bubble?path=script.js:4:12*/ 
 
-/*finish adding lines*/
-var lines = [""];
+var lines = ["Riley","Mackey","MyEclairKey","••••••••","••••••••","mackeyriley@gmail.com","mackeyriley@gmail.com",
+			 "Student","Early","Quiet","Cooks sometimes"];
 var counter = +1;
 
 $(document).keydown(function(e){
 	if(e.key == "Enter"){
 		counter = counter-1;
 		$('label').text("");
-		typeText(lines[counter]/*finish*/)
+		typeText(lines[counter],55,'label');
 	}
 })
 
