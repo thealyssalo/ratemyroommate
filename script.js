@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var lines = ["Riley","Mackey","MyEclairKey","••••••••","••••••••","mackeyriley@gmail.com","mackeyriley@gmail.com"];
 var counter = -1;
 var typeLoop;
-var lines2 = ["Gemini","Guinea Pig","Water filter, sunscreen, shovel, gun"];
+var lines2 = ["Gemini","Guinea Pig","INTJ","Water filter, sunscreen, shovel, gun"];
 var change = -1;
 
 
